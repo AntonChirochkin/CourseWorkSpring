@@ -24,7 +24,6 @@ public class Bid {
     public Bid(String bidderName) {
         this.bidderName = bidderName;
         this.dateTime = LocalDateTime.now();
-//        this.lot = lot;
     }
 
     @Override

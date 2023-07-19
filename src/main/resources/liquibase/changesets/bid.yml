@@ -1,28 +1,25 @@
 databaseChangeLog:
   - changeSet:
-      id: two
-      author: Chirochkin
+      id: 2
+      author: Chav
       changes:
         - createTable:
             tableName: bid
             columns:
               - column:
-                  name: title
-                  type: varchar(64)
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: bidder_name
+                  type: varchar(255)
                   constraints:
                     nullable: false
               - column:
-                  name: description
-                  type: varchar(4096)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: startPrice
-                  type: int
-                  constraints:
-                    nullable: false
-              - column:
-                  name: bidPrice
-                  type: int
+                  name: date_time
+                  type: timestamp
                   constraints:
                     nullable: false
