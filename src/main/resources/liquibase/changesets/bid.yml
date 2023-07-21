@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 2
+      id: two
       author: Chav
       changes:
         - createTable:
@@ -23,3 +23,9 @@ databaseChangeLog:
                   type: timestamp
                   constraints:
                     nullable: false
+              - column:
+                  name: lot_id
+                  type: integer
+                  constraints:
+                    foreignKeyName: lot_id
+                    references: lot (id)
