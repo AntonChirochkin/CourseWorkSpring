@@ -32,8 +32,10 @@ public class Lot {
     @Min(3)
     private String description;
     @Min(1)
+    @Column(name = "startprice")
     private int startPrice;
     @Min(1)
+    @Column(name = "bidprice")
     private int bidPrice;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @Fetch(FetchMode.SUBSELECT)
